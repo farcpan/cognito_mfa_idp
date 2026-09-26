@@ -46,7 +46,7 @@ export class MainStack extends Stack {
             },
             autoVerify: {
                 email: true,
-                phone: true,
+                phone: false,
             },
             mfa: Mfa.OPTIONAL,  // MFAは必須ではない
             mfaSecondFactor: {
