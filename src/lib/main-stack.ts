@@ -1,5 +1,5 @@
 import { Construct } from "constructs";
-import { CfnOutput, Stack, StackProps } from "aws-cdk-lib";
+import { CfnOutput, RemovalPolicy, Stack, StackProps } from "aws-cdk-lib";
 import { 
     AccountRecovery, 
     Mfa, 
@@ -68,6 +68,9 @@ export class MainStack extends Stack {
             email: UserPoolEmail.withCognito(),
             // SMS MFAを使用するため、CDKにSMS用IAM Roleを作成させる
             enableSmsRole: true,
+
+            // 削除ポリシー
+            removalPolicy: RemovalPolicy.DESTROY
         });
 
         // 通常ログイン用のクライアント

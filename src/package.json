@@ -7,7 +7,8 @@
     "test": "jest",
     "cdk": "cdk",
     "dif-dev-all": "cdk diff -c stage=dev --profile=dev",
-    "dep-dev-all": "cdk deploy --all -c stage=dev --profile=dev --require-approval=never"
+    "dep-dev-all": "cdk deploy --all -c stage=dev --profile=dev --require-approval=never",
+    "destroy-dev-all": "cdk destroy --all -c stage=dev --profile=dev"
   },
   "devDependencies": {
     "@swc/core": "^1.15.0",
